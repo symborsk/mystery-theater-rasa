@@ -1,0 +1,15 @@
+#TODO: why are we seeing it not work when it only in response file.
+# responses:
+#    utter_greet:
+#        - text: |
+#            Hello! Welcome to the theater.
+#        - text: |
+#            Hi! Welcome to the mystery theater.
+#    utter_where_am_i:
+#        - text: |
+#            You are at the Mystery Theater 3001, a theater that only plays murder mysteries.
+#    utter_what_happened_tonight:
+#        - text: |
+#            I really don't know..... I was making popcorn and then I found the a body in the cooler.
+#        - text: |
+#            I just was making popcorn and went to get butter from cooler and I saw this body there... all lifeless.

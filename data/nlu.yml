@@ -1,0 +1,24 @@
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey!
+    - Hallo
+    - Good day
+    - Good evening
+    - Hello
+    - Whats up?
+
+- intent: where_am_i
+  examples: |
+    - Where am I?
+    - Where is this place?
+    - Where are we?
+    - Where dis?
+
+- intent: what_happened_tonight
+  examples: |
+    - What happened tonight?
+    - What the hell happened?
+    - What am I look at?
+    - Give me summary of events of tonight.

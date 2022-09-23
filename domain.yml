@@ -1,0 +1,39 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- where_am_i
+- what_happened_tonight
+
+#TODO: Slots understanding
+# slots:
+#   email:
+#     type: text
+#     influence_conversation: false
+#     mappings: []
+
+responses:
+  utter_greet:
+      - text: |
+          Hello! Welcome to the theater.
+      - text: |
+          Hi! Welcome to the mystery theater.
+  utter_where_am_i:
+      - text: |
+          You are at the Mystery Theater 3001, a theater that only plays murder mysteries.
+  utter_what_happened_tonight:
+      - text: |
+          I really don't know..... I was making popcorn and then I found the a body in the cooler.
+      - text: |
+          I just was making popcorn and went to get butter from cooler and I saw this body there... all lifeless.
+actions:
+- utter_greet
+- utter_where_am_i
+- utter_what_happened_tonight
+
+# forms:
+#   newsletter_form:
+#     required_slots:
+#     - email

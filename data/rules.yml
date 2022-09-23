@@ -1,0 +1,13 @@
+rules:
+- rule: Greeting Rule
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: where_am_i Rule
+  steps:
+  - intent: where_am_i
+  - action: utter_where_am_i
+- rule: what_happened_tonight Rule
+  steps:
+  - intent: what_happened_tonight
+  - action: utter_what_happened_tonight
