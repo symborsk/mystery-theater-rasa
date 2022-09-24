@@ -32,4 +32,5 @@ nlu:
     - It couldn't of been found in both fridge and freezer?
 
 - intent: give_name
+  examples: |
     - [Bob](name)
