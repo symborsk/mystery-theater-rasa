@@ -6,6 +6,7 @@ intents:
 - greet
 - where_am_i
 - what_happened_tonight
+- confess
 
 #TODO: Slots understanding
 # slots:
@@ -20,18 +21,28 @@ responses:
           Hello! Welcome to the theater.
       - text: |
           Hi! Welcome to the mystery theater.
+      - text: |
+          Hi there buddy. 
   utter_where_am_i:
       - text: |
           You are at the Mystery Theater 3001, a theater that only plays murder mysteries.
+      - text: |
+          This is the Mystery Theater 3001, we are the only theater that plays only murder mysteries.
   utter_what_happened_tonight:
       - text: |
           I really don't know..... I was making popcorn and then I found the a body in the cooler.
       - text: |
           I just was making popcorn and went to get butter from cooler and I saw this body there... all lifeless.
+      - text: |
+          I could not believe my eyes. I... I just saw him there lying there in the freezer.
+  utter_confess:
+      - text: |
+          I did it..... I killed him. He wouldn't ever butter my popcorn.
 actions:
 - utter_greet
 - utter_where_am_i
 - utter_what_happened_tonight
+- utter_confess
 
 # forms:
 #   newsletter_form:

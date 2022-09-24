@@ -11,3 +11,7 @@ rules:
   steps:
   - intent: what_happened_tonight
   - action: utter_what_happened_tonight
+- rule: confess Rule
+  steps:
+  - intent: confess
+  - action: utter_confess
