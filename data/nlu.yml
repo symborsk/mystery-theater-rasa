@@ -22,3 +22,10 @@ nlu:
     - What the hell happened?
     - What am I look at?
     - Give me summary of events of tonight.
+
+- intent: confess
+  examples: |
+    - Was the body in the fridge or freezer?
+    - You mis-poke about the body in freezer or fridge.
+    - Fridge or freezer what was it?
+    - It couldn't of been found in both fridge and freezer?
