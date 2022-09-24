@@ -15,3 +15,7 @@ rules:
   steps:
   - intent: confess
   - action: utter_confess
+- rule: Don't wanna talk rule.
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

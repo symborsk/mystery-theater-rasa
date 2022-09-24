@@ -8,12 +8,20 @@ intents:
 - what_happened_tonight
 - confess
 
-#TODO: Slots understanding
+# entities:
+# - name
+# - occupation
 # slots:
-#   email:
+#   cuisine:
 #     type: text
-#     influence_conversation: false
-#     mappings: []
+#     mappings:
+#     - type: from_entity
+#       entity: cuisine
+#   num_people:
+#     type: any
+#     mappings:
+#     - type: from_entity
+#       entity: number
 
 responses:
   utter_greet:
@@ -38,11 +46,19 @@ responses:
   utter_confess:
       - text: |
           I did it..... I killed him. He wouldn't ever butter my popcorn.
+  utter_default:
+      - text: |
+          Somebody was murdered I do not want to talk about that.
+      - text: |
+          Thats not relevant!
+      - text: |
+          Why would you ask about that its not important!
 actions:
 - utter_greet
 - utter_where_am_i
 - utter_what_happened_tonight
 - utter_confess
+- utter_default
 
 # forms:
 #   newsletter_form:
