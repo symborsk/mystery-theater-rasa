@@ -4,24 +4,32 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
+- introduction
+- give_name
 - where_am_i
 - what_happened_tonight
 - confess
 
-# entities:
-# - name
-# - occupation
-# slots:
-#   cuisine:
-#     type: text
-#     mappings:
-#     - type: from_entity
-#       entity: cuisine
-#   num_people:
-#     type: any
-#     mappings:
-#     - type: from_entity
-#       entity: number
+entities:
+- name
+- occupation
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  occupation:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: occupation
+
+forms:
+  introduction_form:
+    required_slots:
+        - name
 
 responses:
   utter_greet:
@@ -31,6 +39,13 @@ responses:
           Hi! Welcome to the mystery theater.
       - text: |
           Hi there buddy. 
+  utter_ask_who_are_you:
+      - text: |
+          And you are?
+      - text: |
+          What are you called?.
+      - text: |
+          What do you go by? 
   utter_where_am_i:
       - text: |
           You are at the Mystery Theater 3001, a theater that only plays murder mysteries.
@@ -46,6 +61,9 @@ responses:
   utter_confess:
       - text: |
           I did it..... I killed him. He wouldn't ever butter my popcorn.
+  utter_introduction_submit:
+      - text: |
+          Nice to meet you, {name}!
   utter_default:
       - text: |
           Somebody was murdered I do not want to talk about that.
@@ -58,9 +76,5 @@ actions:
 - utter_where_am_i
 - utter_what_happened_tonight
 - utter_confess
+- utter_introduction_submit
 - utter_default
-
-# forms:
-#   newsletter_form:
-#     required_slots:
-#     - email
