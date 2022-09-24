@@ -1,9 +1,27 @@
 version: "3.1"
 rules:
-- rule: Greeting Rule
-  steps:
-  - intent: greet
-  - action: utter_greet
+# - rule: Greeting Rule
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+# - rule: Activate introduction form
+#   steps:
+#   - intent: introduction
+#   - action: introduction_form
+#   - active_loop: introduction_form
+# - rule: Submit introduction form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: introduction_form
+#   steps:
+#   # Form is deactivated
+#   - action: introduction_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   # The actions we want to run when the form is submitted.
+#   - action: utter_introduction_submit
+#   - action: utter_introduction_slots_values
 - rule: where_am_i Rule
   steps:
   - intent: where_am_i

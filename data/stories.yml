@@ -1,1 +1,19 @@
 version: "3.1"
+
+stories:
+- story: introduction  # name of the story - just for debugging
+  steps:
+  - intent: greet
+  - action: utter_greet                         # user message with no entities
+  - action: utter_ask_who_are_you
+  - action: introduction_form
+  - active_loop: introduction_form
+  #   # Form is deactivated
+  # - action: introduction_form
+  # - active_loop: null
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - requested_slot: occupation
+  # The actions we want to run when the form is submitted.
+  - action: utter_introduction_submit
