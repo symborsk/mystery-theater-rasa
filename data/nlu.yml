@@ -9,6 +9,8 @@ nlu:
     - Good evening
     - Hello
     - Whats up?
+    - Hi there
+    - Hello friend
 
 - intent: where_am_i
   examples: |

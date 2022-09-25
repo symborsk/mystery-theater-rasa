@@ -35,7 +35,14 @@ responses:
       - text: |
           Hi! Welcome to the mystery theater.
       - text: |
-          Hi there buddy. 
+          Hi there buddy.
+  utter_greet_name:
+      - text: |
+          Hello {first_name}! Welcome to the theater.
+      - text: |
+          Hi {first_name}! Welcome to the mystery theater.
+      - text: |
+          Hi there {first_name}.  
   utter_ask_first_name:
       - text: |
           What is your name?
@@ -68,6 +75,9 @@ responses:
           Thats not relevant!
       - text: |
           Why would you ask about that its not important!
+  utter_default_name:
+      - text: |
+          Why would we talk about that {first_name}, you pleb!
 actions:
 - utter_greet
 - utter_where_am_i
