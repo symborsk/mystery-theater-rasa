@@ -4,7 +4,6 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - greet
-- introduction
 - give_name
 - where_am_i
 - what_happened_tonight
@@ -57,14 +56,16 @@ responses:
           This is the Mystery Theater 3001, we are the only theater that plays only murder mysteries.
   utter_what_happened_tonight:
       - text: |
-          I really don't know..... I was making popcorn and then I found the a body in the cooler.
+          I really don't know. I was making popcorn and then I found the a body in the cooler.
       - text: |
           I just was making popcorn and went to get butter from cooler and I saw this body there... all lifeless.
       - text: |
-          I could not believe my eyes. I... I just saw him there lying there in the freezer.
+          I could not believe my eyes. I, I just saw him lying there in the freezer.
   utter_confess:
       - text: |
-          I did it..... I killed him. He wouldn't ever butter my popcorn.
+          I did it. I killed him. He wouldn't ever butter my popcorn.
+      - text: |
+          I murdered that bitch. Every day he tormented me with his butter-less popcorn.
   utter_introduction_submit:
       - text: |
           Nice to meet you, {first_name}!
@@ -78,6 +79,10 @@ responses:
   utter_default_name:
       - text: |
           Why would we talk about that {first_name}, you pleb!
+      - text: |
+          Thats not relevant {first_name}. 
+      - text: |
+          Why would you ask about that its not important {first_name}!
 actions:
 - utter_greet
 - utter_where_am_i
