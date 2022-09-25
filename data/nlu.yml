@@ -32,7 +32,3 @@ nlu:
     - You mis-poke about the body in freezer or fridge.
     - Fridge or freezer what was it?
     - It couldn't of been found in both fridge and freezer?
-
-- intent: give_name
-  examples: |
-    - [Bob](name)
