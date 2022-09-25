@@ -53,19 +53,36 @@ responses:
       - text: |
           You are at the Mystery Theater 3001, a theater that only plays murder mysteries.
       - text: |
-          This is the Mystery Theater 3001, we are the only theater that plays only murder mysteries.
+          This is the Mystery Theater 3001, we are the only theater that plays only murder mysteries.           
+  utter_where_am_i_name:
+      - text: |
+          You are at the Mystery Theater 3001, {first_name}, a theater that only plays murder mysteries.
+      - text: |
+          This is the Mystery Theater 3001, {first_name}, we are the only theater that plays only murder mysteries.         
   utter_what_happened_tonight:
       - text: |
           I really don't know. I was making popcorn and then I found the a body in the cooler.
       - text: |
-          I just was making popcorn and went to get butter from cooler and I saw this body there... all lifeless.
+          I just was making popcorn and went to get butter from the cooler and I saw this body there... all lifeless.
       - text: |
           I could not believe my eyes. I, I just saw him lying there in the freezer.
+  utter_what_happened_tonight_name:
+      - text: |
+          I really don't know, {first_name}. I was making popcorn and then I found the a body in the cooler.
+      - text: |
+          I just was making popcorn and went to get butter from the cooler and I saw this body there... all lifeless.
+      - text: |
+          I could not believe my eyes, {first_name}. I, I just saw him lying there in the freezer.          
   utter_confess:
       - text: |
           I did it. I killed him. He wouldn't ever butter my popcorn.
       - text: |
           I murdered that bitch. Every day he tormented me with his butter-less popcorn.
+  utter_confess_name:
+      - text: |
+          I did it, {first_name}. I killed him. He wouldn't ever butter my popcorn.
+      - text: |
+          I murdered that bitch. You wouldn't believe it {first_name} - every day he tormented me with his butter-less popcorn.          
   utter_introduction_submit:
       - text: |
           Nice to meet you, {first_name}!

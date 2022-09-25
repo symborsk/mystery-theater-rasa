@@ -30,14 +30,40 @@ rules:
   steps:
   - intent: where_am_i
   - action: utter_where_am_i
+
+- rule: where_am_i_name with name Rule
+  condition:
+    - slot_was_set:
+      - first_name
+  steps:
+  - intent: where_am_i
+  - action: utter_where_am_i_name
+
 - rule: what_happened_tonight Rule
   steps:
   - intent: what_happened_tonight
   - action: utter_what_happened_tonight
+
+- rule: what_happened_tonight with name Rule
+  condition:
+    - slot_was_set:
+      - first_name
+  steps:
+  - intent: what_happened_tonight
+  - action: utter_what_happened_tonight_name 
+
 - rule: confess Rule
   steps:
   - intent: confess
   - action: utter_confess
+
+- rule: confess with name Rule
+  condition:
+    - slot_was_set:
+      - first_name  
+  steps:
+  - intent: confess
+  - action: utter_confess_name
 
 - rule: Don't wanna talk rule with name.
   condition:
