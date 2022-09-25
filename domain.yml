@@ -11,25 +11,22 @@ intents:
 - confess
 
 entities:
-- name
-- occupation
+- first_name
 
 slots:
-  name:
+  first_name:
     type: text
+    influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: name
-  occupation:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: occupation
+      - type: from_text
+        conditions:
+         - active_loop: name_form
+           requested_slot: first_name
 
 forms:
-  introduction_form:
+  name_form:
     required_slots:
-        - name
+        - first_name
 
 responses:
   utter_greet:
@@ -39,9 +36,9 @@ responses:
           Hi! Welcome to the mystery theater.
       - text: |
           Hi there buddy. 
-  utter_ask_who_are_you:
+  utter_ask_first_name:
       - text: |
-          And you are?
+          What is your name?
       - text: |
           What are you called?.
       - text: |
@@ -63,7 +60,7 @@ responses:
           I did it..... I killed him. He wouldn't ever butter my popcorn.
   utter_introduction_submit:
       - text: |
-          Nice to meet you, {name}!
+          Nice to meet you, {first_name}!
   utter_default:
       - text: |
           Somebody was murdered I do not want to talk about that.
