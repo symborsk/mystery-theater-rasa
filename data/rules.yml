@@ -1,11 +1,20 @@
 version: "3.1"
 rules:
-- rule: Activate form
+
+- rule: Welcome activate form
   steps:
   - intent: greet
   - action: utter_greet
   - action: name_form
   - active_loop: name_form
+
+- rule: Welcome no form
+  condition:
+  - slot_was_set:
+     -  first_name
+  steps:
+  - intent: greet
+  - action: utter_greet_name
 
 - rule: Submit form
   condition:
@@ -29,7 +38,16 @@ rules:
   steps:
   - intent: confess
   - action: utter_confess
-- rule: Don't wanna talk rule.
+
+- rule: Don't wanna talk rule with name.
+  condition:
+  - slot_was_set:
+     -  first_name
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default_name
+
+- rule: Don't wanna talk rule with no name.
   steps:
   - intent: nlu_fallback
   - action: utter_default
